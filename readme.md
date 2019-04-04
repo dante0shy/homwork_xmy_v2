@@ -7,16 +7,18 @@ data source : lyrics  wiki (sitemap)
 data :
     
     final data file : 
-        train_val/test.csv 
-        train_val/train.csv
-    TOTAL crawler : 44027
-    vald data: 6301
-    data has category : 5526
+        train_val/train.csv  6244
+        train_val/test.csv 500
+    TOTAL crawler : 67934
+    vald data: 6923
+    data has category : 6744
+    {'Electronica': 188, 'Metal': 917, 'Folk': 435, 'Punk': 479, 'Pop': 407, 'HipHop': 1166, 'Ska': 32, 'Blues': 94, 'Rap': 91, 'Rock': 2935}
+
 
     
 label:
     
-    original label : train_val/label.csv
+    original label : train_val/original_label.csv
     finial label : train_val/label.csv
 
 performance,train time iteration 319142:
