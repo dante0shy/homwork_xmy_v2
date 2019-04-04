@@ -22,6 +22,7 @@ class_dict = {
     'rap' : 'Rap',
     'soul' : 'Blues',
     'blues' : 'Blues',
+    'ska' : 'Blues',
     'r&b' : 'Blues',
     'folk' :'Folk',
     'country' : 'Folk',

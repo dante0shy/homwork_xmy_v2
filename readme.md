@@ -12,8 +12,7 @@ data :
     TOTAL crawler : 67934
     vald data: 6923
     data has category : 6744
-    {'Electronica': 188, 'Metal': 917, 'Folk': 435, 'Punk': 479, 'Pop': 407, 'HipHop': 1166, 'Ska': 32, 'Blues': 94, 'Rap': 91, 'Rock': 2935}
-
+    {'Punk': 479, 'HipHop': 1166, 'Rock': 2935, 'Folk': 435, 'Blues': 145, 'Rap': 91, 'Pop': 407, 'Metal': 917, 'Electronica': 188}
 
     
 label:
@@ -23,10 +22,10 @@ label:
 
 performance,train time iteration 319142:
 
-    bi-lstm 0.6600
+    bi-lstm 0.6600 #6540
     double bi-lstm 0.648  (overfitting)
     bi-lstm-deep conv 0.6640000004768372 
-    lstm 0.6560000004768372
+    lstm 0.6560 #0.6640
 
 report:
     

@@ -110,7 +110,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 # Prediction
 batch_size = 32
-epochs = 6
+epochs = 5
 
 #fit the data
 model.fit(train_x, train_y, batch_size=batch_size, epochs=epochs, verbose=1,validation_data=[test_x, test_y])
