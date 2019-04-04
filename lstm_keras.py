@@ -84,14 +84,14 @@ x = SpatialDropout1D(0.35)(x)
 # x = Bidirectional(LSTM(256, return_sequences=True, dropout=0.15, recurrent_dropout=0.15))(x)
 # x = Conv1D(64, kernel_size=3, padding='valid', kernel_initializer='glorot_uniform')(x)
 #BiLSTM deep conv
-# x = Bidirectional(LSTM(256, return_sequences=True, dropout=0.15, recurrent_dropout=0.15))(x)
-# x = Conv1D(256, kernel_size=3, padding='same', kernel_initializer='glorot_uniform')(x)
-# x = Conv1D(128, kernel_size=3, padding='same', kernel_initializer='glorot_uniform')(x)
-# x = Conv1D(64, kernel_size=3, padding='same', kernel_initializer='glorot_uniform')(x)
-# x = Conv1D(64, kernel_size=3, padding='valid', kernel_initializer='glorot_uniform')(x)
-# LSTM 
-x = LSTM(256, return_sequences=True, dropout=0.15, recurrent_dropout=0.15)(x)
+x = Bidirectional(LSTM(256, return_sequences=True, dropout=0.15, recurrent_dropout=0.15))(x)
+x = Conv1D(256, kernel_size=3, padding='same', kernel_initializer='glorot_uniform')(x)
+x = Conv1D(128, kernel_size=3, padding='same', kernel_initializer='glorot_uniform')(x)
+x = Conv1D(64, kernel_size=3, padding='same', kernel_initializer='glorot_uniform')(x)
 x = Conv1D(64, kernel_size=3, padding='valid', kernel_initializer='glorot_uniform')(x)
+# LSTM
+# x = LSTM(256, return_sequences=True, dropout=0.15, recurrent_dropout=0.15)(x)
+# x = Conv1D(64, kernel_size=3, padding='valid', kernel_initializer='glorot_uniform')(x)
 
 
 # avg_pool = GlobalAveragePooling1D()(x)
@@ -110,7 +110,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 # Prediction
 batch_size = 32
-epochs = 5
+epochs = 10
 
 #fit the data
 model.fit(train_x, train_y, batch_size=batch_size, epochs=epochs, verbose=1,validation_data=[test_x, test_y])

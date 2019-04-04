@@ -20,12 +20,16 @@ label:
     original label : train_val/original_label.csv
     finial label : train_val/label.csv
 
-performance,train time iteration 319142:
+performance:
 
-    bi-lstm 0.6600 #6540
-    double bi-lstm 0.648  (overfitting)
-    bi-lstm-deep conv 0.6640000004768372 
-    lstm 0.6560 #0.6640
+    bi-lstm 0.6600 #6740000004768372 (5 epoch)
+    double bi-lstm 0.6720  (4 epoch)
+    bi-lstm-deep conv 0.6640000004768372 #0.6640 (5 epoch)
+    lstm 0.6560 #0.6700 (5 epoch)
+    
+    number behind # is the result, the effect is bi-lstm > lstm > double bi-lstm > bi-lstm-deep conv
+    Resean is the effect of overfitting is quite significant on this dataset. 
+    The finial number of the data is not enough to surpport the mission here.
 
 report:
     
