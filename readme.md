@@ -12,7 +12,7 @@ data :
     TOTAL crawler : 67934
     vald data: 6923
     data has category : 6744
-    {'Punk': 479, 'HipHop': 1166, 'Rock': 2935, 'Folk': 435, 'Blues': 145, 'Rap': 91, 'Pop': 407, 'Metal': 917, 'Electronica': 188}
+    {'Folk': 435, 'Rock': 2935, 'Punk': 479, 'Electronica': 188, 'Metal': 917, 'Blues': 145, 'Pop': 407, 'Rap': 1257}
 
     
 label:
@@ -22,10 +22,10 @@ label:
 
 performance:
 
-    bi-lstm 0.6600 #6740000004768372 (5 epoch)
-    double bi-lstm 0.6720  (4 epoch)
-    bi-lstm-deep conv 0.6640000004768372 #0.6640 (5 epoch)
-    lstm 0.6560 #0.6700 (5 epoch)
+    bi-lstm 0.6840 (5 epoch)
+    double bi-lstm 0.6740  (4 epoch)
+    bi-lstm-deep conv 0.6740 (5 epoch)
+    lstm 0.6720 (5 epoch)
     
     number behind # is the result, the effect is bi-lstm > lstm > double bi-lstm > bi-lstm-deep conv
     Resean is the effect of overfitting is quite significant on this dataset. 

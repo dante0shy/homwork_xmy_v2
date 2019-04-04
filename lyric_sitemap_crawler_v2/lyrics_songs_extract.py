@@ -34,7 +34,7 @@ def handle_album(htmlcontent, album_name, artistobj):
     albumhtml = html.fromstring(htmlcontent)
     songs_in_album = [dict(x.attrib) for x in albumhtml.cssselect("ol li a")]
     for s in songs_in_album:
-        if 'href' not  in s.keys() or (artistobj['unique_name'] not in s['href'] or 'redlink' in s['href']):
+        if 'href' not in s.keys() or (artistobj['unique_name'] not in s['href'] or 'redlink' in s['href']):
             continue
         s['href'] = s['href'].replace("/wiki/", "")
         albobj['songs'].append(s)
@@ -138,7 +138,6 @@ def handle_band(artist_songs_and_albums):
         flatobj['artist'].update(artist_obj)
         flat_songs.append(flatobj)
     if len(flat_songs) > 0:
-
         with open(os.path.join(OUTPUT_BASEPATH, artist+'.json'), 'w') as f:
             # f.write(.encode())
             json.dump(flat_songs, f)
@@ -150,5 +149,5 @@ if __name__ == '__main__':
     if '' in allfiles.keys():
         allfiles.pop('')
     pardata = [(artist, songs_and_albums) for artist, songs_and_albums in allfiles.items()]
-    list(executor.map(handle_band, pardata))
-    # list(map(handle_band, pardata))
+    # list(executor.map(handle_band, pardata))
+    list(map(handle_band, pardata))

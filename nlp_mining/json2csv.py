@@ -7,9 +7,9 @@ import pprint
 class_dict = {
     'rock':'Rock',
     'grunge':'Rock',
-    'hip' :'HipHop',
-    'hop' : 'HipHop',
-    'crunk' : 'HipHop',
+    'hip' :'Rap',
+    'hop' : 'Rap',
+    'crunk' : 'Rap',
     'metal': 'Metal',
     'deathcore': 'Metal',
     'industrial': 'Metal',

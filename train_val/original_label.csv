@@ -1,34 +1,33 @@
 ,class
-0,Punk
-1,Grime
-2,HipHop
-3,Rock
-4,Bluegrass
-5,Christmas
-6,Jazz Fusion
-7,Musical
-8,Singer-Songwriter
-9,Neue Deutsche Härte
-10,Mixed
-11,Folk
-12,Vocal
-13,Chanson
-14,Comedy
-15,Worldbeat
-16,Blues
-17,Funk
-18,Experimental
-19,Rap
-20,Jazz
-21,Americana
-22,Downtempo
-23,Pop
-24,Ambient
-25,Medieval
-26,Gospel
-27,Movie
-28,Metal
-29,Drone Doom
-30,Electronica
-31,Television
-32,Reggae
+0,Funk
+1,Folk
+2,Comedy
+3,Gospel
+4,Experimental
+5,Rock
+6,Neue Deutsche Härte
+7,Punk
+8,Mixed
+9,Musical
+10,Downtempo
+11,Electronica
+12,Movie
+13,Medieval
+14,Television
+15,Reggae
+16,Worldbeat
+17,Drone Doom
+18,Ambient
+19,Americana
+20,Metal
+21,Christmas
+22,Blues
+23,Jazz
+24,Chanson
+25,Pop
+26,Bluegrass
+27,Grime
+28,Singer-Songwriter
+29,Jazz Fusion
+30,Vocal
+31,Rap
