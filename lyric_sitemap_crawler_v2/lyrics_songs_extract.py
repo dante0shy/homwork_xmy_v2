@@ -147,10 +147,8 @@ def handle_band(artist_songs_and_albums):
 
 if __name__ == '__main__':
     allfiles = get_data_dict()
-    try:
-        del allfiles['']
-    except:
-        pass
+    if '' in allfiles.keys():
+        allfiles.pop('')
     pardata = [(artist, songs_and_albums) for artist, songs_and_albums in allfiles.items()]
     list(executor.map(handle_band, pardata))
     # list(map(handle_band, pardata))

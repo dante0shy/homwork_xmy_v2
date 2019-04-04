@@ -30,8 +30,6 @@ test_x['lyrics'].fillna(' ')
 train_y = np.zeros([len(train_x['class'].values),len(label)])
 for i in range((len(train_x['class'].values))):
     train_y[i,train_x['class'].values[i]] =1
-# train_y[(train_x['class'].values).reshape([-1,1])] = 1
-    # train_x['class'].values
 train_x = train_x['lyrics'].str.lower()
 test_y = np.zeros([len(test_x['class'].values), len(label)])
 for i in range((len(test_x['class'].values))):
@@ -93,19 +91,10 @@ x = Conv1D(64, kernel_size=3, padding='valid', kernel_initializer='glorot_unifor
 # x = LSTM(256, return_sequences=True, dropout=0.15, recurrent_dropout=0.15)(x)
 # x = Conv1D(64, kernel_size=3, padding='valid', kernel_initializer='glorot_uniform')(x)
 
-
-# avg_pool = GlobalAveragePooling1D()(x)
-# max_pool = GlobalMaxPooling1D()(x)
 x = GlobalMaxPooling1D()(x)
-# x = concatenate([avg_pool, max_pool])
-# x = Dense(256)(x)
-
 out = Dense(len(label), activation='sigmoid')(x)
 
 model = Model(inp, out)
-
-from keras.callbacks import EarlyStopping, ModelCheckpoint, LearningRateScheduler
-# early_stop = EarlyStopping(monitor = "accuracy", mode = "min", patience = 5)
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 # Prediction

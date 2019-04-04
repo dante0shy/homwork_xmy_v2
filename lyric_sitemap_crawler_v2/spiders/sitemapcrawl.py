@@ -18,10 +18,9 @@ class MySpider(SitemapSpider):
     def parse_sitemap_url(self, response):
         fname = response.url.split('/')[-1]
         print(response)
-        writable = base64.b64encode(gzip.compress(response.body))
-        count = 0
-        with open(os.path.join(BASE_OUTPUT_DIR , '%s'% fname+'&&{}'.format(random.randint(0,10000))) , 'wb') as f:#
-            f.write(writable)
+        htmi = base64.b64encode(gzip.compress(response.body))
+        with open(os.path.join(BASE_OUTPUT_DIR , '{}&&{}'.format(fname,random.randint(0,10000))) , 'wb') as f:#
+            f.write(htmi)
 
 
 cmdline.execute("scrapy runspider sitemapcrawl.py --set DOWNLOAD_DELAY=1.5 --set JOBDIR=lyrics".split())
